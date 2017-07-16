@@ -107,6 +107,18 @@ struct corsair_device_info corsairlink_devices[] = {
 	},
 	{
 		.vendor_id = 0x1b1c,
+		.product_id = 0x1c00,
+		.device_id = 0xFF,
+		.name = "CorsairLink Dongle",
+		.read_endpoint = 0x01|LIBUSB_ENDPOINT_IN,
+		.write_endpoint = 0x01|LIBUSB_ENDPOINT_OUT,
+		.driver = &corsairlink_driver_dongle,
+		.led_control_count = 0,
+		.fan_control_count = 1,
+		.pump_index = 0,
+	},
+	{
+		.vendor_id = 0x1b1c,
 		.product_id = 0x1c0a,
 		.device_id = 0xFF,
 		.name = "RM650i",
